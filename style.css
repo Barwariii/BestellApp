@@ -2,6 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     background-color: #003049 !important;
+    box-sizing: border-box;
 }
 
 
@@ -52,7 +53,11 @@ body {
 
 .content {
     width: calc(100% - 300px);
+    height: 100vh;
     border: 2px solid green;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    flex-grow: 1;
 }
 
 
@@ -76,4 +81,13 @@ body {
     background-color: #08496d;
     top: 2px;
     position: sticky;
+}
+
+
+/* js content styling */
+
+.menus-box {
+    background-color: #08496d;
+    width: 100%;
+    height: 180px;margin-bottom: 8px;
 }
