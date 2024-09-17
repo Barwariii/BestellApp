@@ -1,0 +1,88 @@
+/* header navbar sec */
+header {
+    height: 104px;
+    background-color: #f77f00;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.062);
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-left: 24px;
+}
+
+.header-logo-small {
+    display: none;
+}
+
+#navBar {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+
+
+.navLink {
+    color: #403b3b;
+    text-decoration: none;
+    font-size: 24px;
+    padding-left: 24px;
+    font-family: "Raleway-Medium", sans-serif;
+    font-weight: 500;
+}
+
+.navLink:hover {
+    /* text-decoration: underline; */
+    color: green;
+}
+
+/* Tablet Device version */
+@media(max-width: 1210px) and (min-width: 800px) {
+    #navBar {
+        display: none;
+    }
+
+    header {
+        height: 80px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    .logo {
+        width: 250px;
+        height: auto;
+    }
+    
+}
+
+/* Mobile Device version */
+
+@media(max-width: 800px) {
+    #navBar {
+        display: none;
+    }
+
+    header {
+        height: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header-logo-small {
+        display: block;
+        width: 40px;
+    }
+}
