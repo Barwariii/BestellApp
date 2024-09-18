@@ -13,21 +13,3 @@ p {
     color: white;
     font-size: 24px !important;
 }
-
-.btn {
-    display: flex;
-    justify-content: end;
-}
-
-button {
-    width: 40px;
-    height: 40px;
-    font-size: 32px;
-}
-
-
-button:hover {
-    cursor: pointer;
-    color: green;
-    background-color: #e1a121;
-}

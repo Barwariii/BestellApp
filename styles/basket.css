@@ -1,0 +1,64 @@
+.basket-content {
+    width: 300px;
+    flex-grow: 1;
+    border: 2px solid red;
+    padding: 16px;
+}
+
+.basket-box {
+    width: 100%;
+    height: 400px;
+    background-color: #08496d;
+    top: 2px;
+    position: sticky;
+}
+
+.basket-dishes {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-dishes h6 {
+    font-size: 20px;
+    color: white;
+    margin: 8px 0 0 8px;
+}
+
+
+.amount-preis {
+    display: flex;
+    justify-content: space-around;
+}
+
+.basket-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.basket-btn button {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    margin: 8px;
+    background-color: none;
+}
+
+
+.basket-btn button:hover {
+    cursor: pointer;
+    color: green;
+    background-color: #e1a121;
+}
+
+
+.basket-btn p {
+    font-size: 16px !important;
+}
+
+
+.basket-preisec {
+    font-size: 16px !important;
+    color: #e1a121;
+}

@@ -31,23 +31,43 @@ let menus = [
     }
 ]
 
+
+let basket = [
+    {
+        "disches": "Hawaiisalat",
+        "info": "gemischter Salat mit Vorderschinken, Käse, Ananas und Dressing",
+        "prices": 7.90,
+        "amounts": 1
+    }
+]
+
 function init() {
+    render();
+}
+
+
+function render() {
+    renderMenus();
+    renderBasket();
+}
+
+function renderMenus() {
     let menusRef = document.getElementById('content');
     menusRef.innerHTML= "";
     for (let indexMenus = 0; indexMenus < menus.length; indexMenus++) {
-        const element = menus[indexMenus];
+        const menusElements = menus[indexMenus];
         
-        menusRef.innerHTML += /*html*/ `
-        <div id="menus-box${indexMenus}" class="menus-box">
-            <div class="btn">
-            <button onclick="addToBasketBtn${indexMenus}">+</button>
-            </div>
-            <div id="menu-info">
-                <h3>${element.disches}</h3>
-                <p>${element.info}</p>
-                <p>preis: ${element.prices} €</p>
-            </div>
-        </div>
-        `
+        menusRef.innerHTML += getMenusTemplate(menusElements, indexMenus);
+    }
+}
+
+
+function renderBasket() {
+    let basketRef = document.getElementById('basket_content');
+    basketRef.innerHTML= "";
+    for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
+        const basketElements = basket[indexBasket];
+        
+        basketRef.innerHTML += getBasketsTemplate(basketElements, indexBasket);
     }
 }
