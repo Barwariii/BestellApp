@@ -32,8 +32,6 @@ let menus = [
 ]
 
 
-let basket = [
-
-]
+let basket = []
 
 let globalIndex = 0;

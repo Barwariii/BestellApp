@@ -22,7 +22,7 @@ function renderMenus() {
 
 // render basket elements
 function renderBasket() {
-    let basketRef = document.getElementById('basket_content');
+    let basketRef = document.getElementById('basket_div');
     basketRef.innerHTML= "";
     for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
         const basketElements = basket[indexBasket];
@@ -43,19 +43,19 @@ function addToBasket(indexBasket) {
     let basketIndex = basket.findIndex(checkMenu);
     console.log(basketIndex);
 
-    let chosedDishes = menus[indexBasket];
+    // let chosedDishes = menus[indexBasket];
     if (basketIndex == -1) {
-        basket.push(chosedDishes);
+        basket.push({
+            "dishes": menus[indexBasket].dishes,
+            "prices": menus[indexBasket].prices,
+            "amounts": menus[indexBasket].amounts
+        });
         console.log("wir sind im if part");
         
     } else {
         console.log("wir sind im else part");
         basket[basketIndex].amounts++;
     }
-    
-
-    // let chosedDishes = menus[indexBasket];
-    // basket.push(chosedDishes);
 
     renderBasket();
 }
@@ -64,8 +64,7 @@ function addToBasket(indexBasket) {
 // delete elements from basket and render it
 function deleteBtn(indexdeleteDishes) {
     basket.splice(indexdeleteDishes, 1);
-    
-    renderBasket();
+    renderBasket(indexdeleteDishes);
 }
 
 
@@ -79,15 +78,13 @@ function plusDishesBtn(basketIndex) {
 }
 
 
-function minusDishesBtn(basketIndex) {
+function minusDishesBtn(basketIndex, indexdeleteDishes) {
     // let myOrderAmount = basket.amounts;
-    if (basket[basketIndex].amounts >= 1) {
+    if (basket[basketIndex].amounts > 1) {
         basket[basketIndex].amounts--;
-        renderBasket();
+    } else {
+        basket[basketIndex].amounts < 1;
+        basket.splice(indexdeleteDishes, 1);
     }
+    renderBasket();
 }
-
-// function getMenuIndex(basket) {
-//     let index = basket.indexOf(basket);
-//     return index;
-// }
