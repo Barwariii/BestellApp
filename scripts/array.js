@@ -9,25 +9,25 @@ let menus = [
         "dishes": "Pizzabrot",
         "info": "mit Tomatensauce, Sardellen und Knoblauch",
         "prices": 6.20,
-        "amounts": 3
+        "amounts": 1
     },
     {
         "dishes": "Pizza Margherita",
         "info": "Tomaten, Käse",
         "prices": 8.20,
-        "amounts": 5
+        "amounts": 1
     },
     {
         "dishes": "Rigatoni al forno",
         "info": "mit Vorderschinken, Champignons, Erbsen in Fleisch- und Tomatensahnesauce überbacken",
         "prices": 9.40,
-        "amounts": 2
+        "amounts": 1
     },
     {
         "dishes": "Insalata nizzarda",
         "info": "gemischter Salat mit Vorderschinken, Käse, Ei, Thunfisch und Dressing",
         "prices": 9.80,
-        "amounts": 4
+        "amounts": 1
     }
 ]
 
@@ -35,3 +35,5 @@ let menus = [
 let basket = [
 
 ]
+
+let globalIndex = 0;
