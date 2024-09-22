@@ -1,12 +1,8 @@
 function init() {
-    render();
-}
-
-
-function render() {
     renderMenus();
     renderBasket();
 }
+
 
 // render menus elements
 function renderMenus() {
@@ -48,7 +44,8 @@ function addToBasket(indexBasket) {
         basket.push({
             "dishes": menus[indexBasket].dishes,
             "prices": menus[indexBasket].prices,
-            "amounts": menus[indexBasket].amounts
+            "amounts": menus[indexBasket].amounts,
+            "calcu": menus[indexBasket].price //!!!!!!!!!!!!
         });
         console.log("wir sind im if part");
         
@@ -58,6 +55,10 @@ function addToBasket(indexBasket) {
     }
 
     renderBasket();
+}
+
+function totalPrice(params) {
+    
 }
 
 
@@ -73,6 +74,7 @@ function plusDishesBtn(basketIndex) {
     // let myOrderAmount = basket.amounts;
     if (basket[basketIndex].amounts >= 1) {
         basket[basketIndex].amounts++;
+        basket[basketIndex].price += basket[basketIndex].price; //!!!!!!!!!!!!
         renderBasket();
     }
 }

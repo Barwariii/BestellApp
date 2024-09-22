@@ -2,12 +2,16 @@ function getMenusTemplate(menusElements, indexMenus) {
     return /*html*/ `
         <div id="menus_box${indexMenus}" class="menus-box">
             <div id="menu_info">
-            <div class="addToBasketBtn">
+            <!-- <div class="addToBasketBtn">
             <button onclick="addToBasket(${indexMenus})">+</button>
-            </div>
+            </div> -->
                 <h3>${menusElements.dishes}</h3>
                 <p>${menusElements.info}</p>
-                <span>preis: ${menusElements.prices.toFixed(2)} €</span>
+                <!-- <span>preis: ${menusElements.prices.toFixed(2)} €</span> -->
+            </div>
+            <div class="addToBasketBtn">
+            <span>preis: ${menusElements.prices.toFixed(2)} €</span>
+            <button onclick="addToBasket(${indexMenus})">+</button>
             </div>
         </div>
         `

@@ -52,7 +52,7 @@ body {
 
 .content {
     width: calc(100% - 300px);
-    border: 2px solid green;
+    /* border: 2px solid green; */
     border-radius: 10px;
     box-sizing: border-box;
     flex-grow: 1;
@@ -72,10 +72,11 @@ body {
 /* js content styling */
 
 .menus-box {
+    box-sizing: border-box;
     background-color: #08496d;
     width: 98%;
-    height: 140px;
-    margin: 8px;
+    height: 100%;
+    margin: 0px 16px 8px 16px;
     border: 2px solid white;
     border-radius: 8px;
 }
@@ -83,19 +84,20 @@ body {
 
 .addToBasketBtn {
     display: flex;
-    justify-content: end;
-    margin: 8px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 8px 8px 16px;
 }
 
 .addToBasketBtn button {
     width: 40px;
     height: 40px;
     font-size: 32px;
+    border-radius: 40%;
 }
 
 
 .addToBasketBtn button:hover {
     cursor: pointer;
-    color: green;
     background-color: #e1a121;
 }

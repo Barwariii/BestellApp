@@ -70,8 +70,8 @@ footer img {
         height: 64px;
         padding-left: 16px;
         padding-right: 16px;
-        margin-left: -16px;
-        margin-right: -16px;
+        /* margin-left: -16px;
+        margin-right: -16px; */
     }
 
     footer img {
