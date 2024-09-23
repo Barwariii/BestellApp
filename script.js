@@ -55,10 +55,21 @@ function addToBasket(indexBasket) {
     }
 
     renderBasket();
+    totalPrice(indexBasket);
 }
 
-function totalPrice(params) {
-    
+
+//total price (gesamtpreise)
+function totalPrice(indexPrice) {
+    let endPrice = document.getElementById('totalPrice');
+    endPrice.innerHTML= "";
+    let endTotalPrice = 0;
+    for (let indexPrice = 0; indexPrice < basket.length; indexPrice++) {
+        const element = basket[indexPrice];
+        endTotalPrice += basket[indexPrice].amounts * element.prices;
+    }
+    renderBasket(indexPrice);
+    endPrice.innerHTML = endTotalPrice.toFixed(2);
 }
 
 
@@ -66,27 +77,30 @@ function totalPrice(params) {
 function deleteBtn(indexdeleteDishes) {
     basket.splice(indexdeleteDishes, 1);
     renderBasket(indexdeleteDishes);
+    totalPrice();
 }
 
 
 // amount btns
-function plusDishesBtn(basketIndex) {
+function plusDishesBtn(basketIndex, indexPrice) {
     // let myOrderAmount = basket.amounts;
     if (basket[basketIndex].amounts >= 1) {
         basket[basketIndex].amounts++;
         basket[basketIndex].price += basket[basketIndex].price; //!!!!!!!!!!!!
         renderBasket();
+        totalPrice(indexPrice);
     }
 }
 
 
-function minusDishesBtn(basketIndex, indexdeleteDishes) {
+function minusDishesBtn(basketIndex, indexdeleteDishes, indexPrice) {
     // let myOrderAmount = basket.amounts;
     if (basket[basketIndex].amounts > 1) {
         basket[basketIndex].amounts--;
     } else {
         basket[basketIndex].amounts < 1;
-        basket.splice(indexdeleteDishes, 1);
+        basket.splice(basketIndex, 1);
     }
     renderBasket();
+    totalPrice(indexPrice);
 }
