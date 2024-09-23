@@ -45,7 +45,7 @@ function addToBasket(indexBasket) {
             "dishes": menus[indexBasket].dishes,
             "prices": menus[indexBasket].prices,
             "amounts": menus[indexBasket].amounts,
-            "calcu": menus[indexBasket].price //!!!!!!!!!!!!
+            // "calcu": menus[indexBasket].prices //!!!!!!!!!!!!
         });
         console.log("wir sind im if part");
         
@@ -86,7 +86,7 @@ function plusDishesBtn(basketIndex, indexPrice) {
     // let myOrderAmount = basket.amounts;
     if (basket[basketIndex].amounts >= 1) {
         basket[basketIndex].amounts++;
-        basket[basketIndex].price += basket[basketIndex].price; //!!!!!!!!!!!!
+        basket[basketIndex].prices * basket[basketIndex].amounts; //!!!!!!!!!!!!
         renderBasket();
         totalPrice(indexPrice);
     }
@@ -103,4 +103,22 @@ function minusDishesBtn(basketIndex, indexdeleteDishes, indexPrice) {
     }
     renderBasket();
     totalPrice(indexPrice);
+}
+
+
+//basket display 
+function toogleBasket() {
+    let displayBasket = document.getElementById('basket_content');
+
+    if (displayBasket.classList.contains('open-basket')) {
+
+        displayBasket.classList.add("basket-content");
+        displayBasket.classList.remove("open-basket");
+    } else {
+        displayBasket.classList.add("open-basket");
+        displayBasket.classList.remove("basket-content");
+    }
+    // displayBasket.classList.remove("basket-content");
+    // displayBasket.classList.add("open-basket", "toggle-basket");
+    // displayBasket.classList.add("open-basket");
 }

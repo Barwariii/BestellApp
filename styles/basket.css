@@ -114,8 +114,27 @@
     }
 
     .toggle-basket {
-        display: flex;
+        display: block;
         width: 56px;
         cursor: pointer;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .open-basket {
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        width: 100%;
+        background: green;
+    }
+
+    .open-basket h3 {
+        text-align: center;
+        margin: 0px 0px 8px 0px !important;
+        background-color: #e1a121;
+        padding: 16px;
+        border-radius: 5px 5px 0px 0px;
     }
 }
