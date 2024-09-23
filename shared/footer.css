@@ -52,8 +52,8 @@ footer img {
         height: 86px;
         padding-left: 24px;
         padding-right: 24px;
-        margin-left: -24px;
-        margin-right: -24px;
+        /* margin-left: -24px;
+        margin-right: -24px; */
     }
 
     footer img {

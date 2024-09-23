@@ -4,13 +4,13 @@ header {
     background-color: #f77f00;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 8px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.062);
 }
 
 .logo {
-    width: 250px;
+    width: 220px;
     height: auto;
     margin-left: 24px;
 }
@@ -51,12 +51,12 @@ header {
         height: 80px;
         padding-left: 24px;
         padding-right: 24px;
-        margin-left: -24px;
-        margin-right: -24px;
+        /* margin-left: -24px;
+        margin-right: -24px; */
     }
 
     .logo {
-        width: 250px;
+        width: 180px;
         height: auto;
     }
     
@@ -78,7 +78,9 @@ header {
     }
 
     .logo {
-        display: none;
+        width: 150px;
+        height: auto;
+        margin: 0;
     }
 
     .header-logo-small {
